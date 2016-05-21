@@ -1,0 +1,12 @@
+version: '2'
+services:
+    librarystatistics-postgresql:
+        container_name: librarystatistics-postgresql
+        image: postgres:9.5.1
+        # volumes:
+        #     - ~/volumes/jhipster/librarystatistics/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=librarystatistics
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

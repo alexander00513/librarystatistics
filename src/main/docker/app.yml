@@ -1,0 +1,21 @@
+version: '2'
+services:
+    librarystatistics-app:
+        image: librarystatistics
+        external_links:
+            - librarystatistics-postgresql:postgresql
+            - librarystatistics-elasticsearch:elasticsearch
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/librarystatistics
+            - SPRING_DATA_ELASTICSEARCH_CLUSTER_NODES=elasticsearch:9300
+        ports:
+            - 8080:8080
+    librarystatistics-postgresql:
+        extends:
+            file: postgresql.yml
+            service: librarystatistics-postgresql
+    librarystatistics-elasticsearch:
+        extends:
+            file: elasticsearch.yml
+            service: librarystatistics-elasticsearch
