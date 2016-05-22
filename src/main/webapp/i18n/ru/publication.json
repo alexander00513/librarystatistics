@@ -1,0 +1,26 @@
+{
+    "librarystatisticsApp": {
+        "publication" : {
+            "home": {
+                "title": "Publications",
+                "createLabel": "Создать новый Publication",
+                "createOrEditLabel": "Создать или отредактировать Publication",
+                "search": "Найти Publication"
+            },
+            "created": "Новый Publication создан с идентификатором {{ param }}",
+            "updated": "Publication обновлен с идентификатором {{ param }}",
+            "deleted": "Publication удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Publication {{ id }}?"
+            },
+            "detail": {
+                "title": "Publication"
+            },
+            "name": "Name",
+            "author": "Author",
+            "isbn": "Isbn",
+            "type": "Type",
+            "library": "Library"
+        }
+    }
+}

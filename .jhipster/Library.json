@@ -1,0 +1,101 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "borough",
+      "otherEntityName": "borough",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "equipments",
+      "otherEntityName": "equipment",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "library"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "publications",
+      "otherEntityName": "publication",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "library"
+    },
+    {
+      "relationshipId": 4,
+      "relationshipName": "subscriptions",
+      "otherEntityName": "subscription",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "library"
+    },
+    {
+      "relationshipId": 5,
+      "relationshipName": "publicationsRequests",
+      "otherEntityName": "publicationsRequest",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "library"
+    },
+    {
+      "relationshipId": 6,
+      "relationshipName": "events",
+      "otherEntityName": "event",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "library"
+    },
+    {
+      "relationshipId": 7,
+      "relationshipName": "websites",
+      "otherEntityName": "website",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "library"
+    },
+    {
+      "relationshipId": 8,
+      "relationshipName": "person",
+      "otherEntityName": "person",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "library"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength",
+        "required"
+      ],
+      "fieldValidateRulesMaxlength": 128
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength",
+        "required"
+      ],
+      "fieldValidateRulesMaxlength": 256
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "type",
+      "fieldType": "LibraryType",
+      "fieldValues": "REPUBLICAN,PUBLIC",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "internetAccess",
+      "fieldType": "Boolean"
+    }
+  ],
+  "changelogDate": "20160522082311",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl"
+}

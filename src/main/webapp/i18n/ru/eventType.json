@@ -1,0 +1,10 @@
+{
+    "librarystatisticsApp": {
+        "EventType" : {
+            "null": "",
+            "MASS_EVENT": "MASS_EVENT",
+            "INTERNET_CENTER": "INTERNET_CENTER",
+            "FREE_ACCESS": "FREE_ACCESS"
+        }
+    }
+}

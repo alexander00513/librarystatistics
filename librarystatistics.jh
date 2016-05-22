@@ -1,0 +1,128 @@
+entity Borough {
+    name String maxlength(32) required
+}
+
+entity Library {
+	name String maxlength(128) required,
+    description String maxlength(256) required,
+    type LibraryType required,
+    internetAccess Boolean,
+}
+
+entity Person {
+	firstName String maxlength(128) required,
+	lastName String maxlength(128) required,
+	email String,
+	phoneNumber String
+}
+
+enum LibraryType {
+	REPUBLICAN, PUBLIC
+}
+
+entity Equipment {
+    uid String maxlength(128) required,
+    decription String maxlength(512),
+    type EquipmentType required
+}
+
+enum EquipmentType {
+	COMPUTER, ROUTER
+}
+
+entity Publication {
+    name String maxlength(128) required,
+    author String maxlength(256) required,
+    isbn String maxlength(128),
+    type PublicationType required
+}
+
+enum PublicationType {
+	PRINTED, ELECTRONIC
+}
+
+entity Subscription {
+    fromDate ZonedDateTime,
+    toDate ZonedDateTime
+}
+
+entity PublicationsRequest {
+	fromDate ZonedDateTime,
+    toDate ZonedDateTime
+}
+
+entity Event {
+    name String maxlength(128) required,
+    description String maxlength(512),
+    type EventType required
+}
+
+enum EventType {
+	MASS_EVENT, INTERNET_CENTER, FREE_ACCESS
+}
+
+entity Website {
+	url String required,
+    visits Long,
+    type WebsiteType required
+}
+
+enum WebsiteType {
+	WEBSITE, BLOG
+}
+
+relationship OneToMany {
+	Borough{libraries} to Library
+}
+
+relationship ManyToMany {
+	Person{library} to Library{person}
+}
+
+relationship OneToMany {
+	Library{equipments} to Equipment
+}
+
+relationship OneToMany {
+	Library{publications} to Publication
+}
+
+relationship OneToMany {
+	Library{subscriptions} to Subscription
+}
+
+relationship OneToOne {
+	Subscription{person} to Person
+}
+
+relationship OneToOne {
+	Subscription{publication} to Publication
+}
+
+relationship OneToMany {
+	Library{publicationsRequests} to PublicationsRequest
+}
+
+relationship OneToOne {
+	PublicationsRequest{person} to Person
+}
+
+relationship OneToOne {
+	PublicationsRequest{publication} to Publication
+}
+
+relationship OneToMany {
+	Library{events} to Event
+}
+
+relationship ManyToMany {
+	Person{event} to Event{person}
+}
+
+relationship OneToMany {
+	Library{websites} to Website
+}
+
+service all with serviceImpl
+dto all with mapstruct
+paginate all with pagination

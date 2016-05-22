@@ -1,0 +1,39 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "library",
+      "otherEntityName": "library",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "url",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "visits",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "type",
+      "fieldType": "WebsiteType",
+      "fieldValues": "WEBSITE,BLOG",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "changelogDate": "20160522082318",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl"
+}

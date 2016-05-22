@@ -1,0 +1,55 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "library",
+      "otherEntityName": "library",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength",
+        "required"
+      ],
+      "fieldValidateRulesMaxlength": 128
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "author",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength",
+        "required"
+      ],
+      "fieldValidateRulesMaxlength": 256
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "isbn",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 128
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "type",
+      "fieldType": "PublicationType",
+      "fieldValues": "PRINTED,ELECTRONIC",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "changelogDate": "20160522082314",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl"
+}

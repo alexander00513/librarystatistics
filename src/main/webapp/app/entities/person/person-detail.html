@@ -1,0 +1,42 @@
+
+<div>
+    <h2><span translate="librarystatisticsApp.person.detail.title">Person</span> {{vm.person.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="librarystatisticsApp.person.firstName">First Name</span></dt>
+        <dd>
+            <span>{{vm.person.firstName}}</span>
+        </dd>
+        <dt><span translate="librarystatisticsApp.person.lastName">Last Name</span></dt>
+        <dd>
+            <span>{{vm.person.lastName}}</span>
+        </dd>
+        <dt><span translate="librarystatisticsApp.person.email">Email</span></dt>
+        <dd>
+            <span>{{vm.person.email}}</span>
+        </dd>
+        <dt><span translate="librarystatisticsApp.person.phoneNumber">Phone Number</span></dt>
+        <dd>
+            <span>{{vm.person.phoneNumber}}</span>
+        </dd>
+        <dt><span translate="librarystatisticsApp.person.library">Library</span></dt>
+        <dd>
+            <span ng-repeat="library in vm.person.libraries">
+                <a ui-sref="library-detail({id: {{library.id}}})">{{library.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span translate="librarystatisticsApp.person.event">Event</span></dt>
+        <dd>
+            <span ng-repeat="event in vm.person.events">
+                <a ui-sref="event-detail({id: {{event.id}}})">{{event.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

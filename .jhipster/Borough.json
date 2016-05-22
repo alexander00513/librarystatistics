@@ -1,0 +1,27 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "libraries",
+      "otherEntityName": "library",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "borough"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength",
+        "required"
+      ],
+      "fieldValidateRulesMaxlength": 32
+    }
+  ],
+  "changelogDate": "20160522082310",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl"
+}

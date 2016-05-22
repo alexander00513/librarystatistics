@@ -1,0 +1,9 @@
+{
+    "librarystatisticsApp": {
+        "EquipmentType" : {
+            "null": "",
+            "COMPUTER": "COMPUTER",
+            "ROUTER": "ROUTER"
+        }
+    }
+}

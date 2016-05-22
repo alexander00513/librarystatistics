@@ -1,0 +1,26 @@
+{
+    "librarystatisticsApp": {
+        "subscription" : {
+            "home": {
+                "title": "Subscriptions",
+                "createLabel": "Создать новый Subscription",
+                "createOrEditLabel": "Создать или отредактировать Subscription",
+                "search": "Найти Subscription"
+            },
+            "created": "Новый Subscription создан с идентификатором {{ param }}",
+            "updated": "Subscription обновлен с идентификатором {{ param }}",
+            "deleted": "Subscription удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Subscription {{ id }}?"
+            },
+            "detail": {
+                "title": "Subscription"
+            },
+            "fromDate": "From Date",
+            "toDate": "To Date",
+            "library": "Library",
+            "person": "Person",
+            "publication": "Publication"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "librarystatisticsApp": {
+        "PublicationType" : {
+            "null": "",
+            "PRINTED": "PRINTED",
+            "ELECTRONIC": "ELECTRONIC"
+        }
+    }
+}

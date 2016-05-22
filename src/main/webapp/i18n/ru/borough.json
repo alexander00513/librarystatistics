@@ -1,0 +1,23 @@
+{
+    "librarystatisticsApp": {
+        "borough" : {
+            "home": {
+                "title": "Boroughs",
+                "createLabel": "Создать новый Borough",
+                "createOrEditLabel": "Создать или отредактировать Borough",
+                "search": "Найти Borough"
+            },
+            "created": "Новый Borough создан с идентификатором {{ param }}",
+            "updated": "Borough обновлен с идентификатором {{ param }}",
+            "deleted": "Borough удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Borough {{ id }}?"
+            },
+            "detail": {
+                "title": "Borough"
+            },
+            "name": "Name",
+            "libraries": "Libraries"
+        }
+    }
+}

@@ -7,6 +7,15 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Сущности",
+                "borough": "Borough",
+                "library": "Library",
+                "person": "Person",
+                "equipment": "Equipment",
+                "publication": "Publication",
+                "subscription": "Subscription",
+                "publicationsRequest": "Publications Request",
+                "event": "Event",
+                "website": "Website",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

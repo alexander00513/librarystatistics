@@ -1,0 +1,9 @@
+{
+    "librarystatisticsApp": {
+        "LibraryType" : {
+            "null": "",
+            "REPUBLICAN": "REPUBLICAN",
+            "PUBLIC": "PUBLIC"
+        }
+    }
+}

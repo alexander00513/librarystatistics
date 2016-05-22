@@ -1,0 +1,26 @@
+{
+    "librarystatisticsApp": {
+        "publicationsRequest" : {
+            "home": {
+                "title": "Publications Requests",
+                "createLabel": "Создать новый Publications Request",
+                "createOrEditLabel": "Создать или отредактировать Publications Request",
+                "search": "Найти Publications Request"
+            },
+            "created": "Новый Publications Request создан с идентификатором {{ param }}",
+            "updated": "Publications Request обновлен с идентификатором {{ param }}",
+            "deleted": "Publications Request удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Publications Request {{ id }}?"
+            },
+            "detail": {
+                "title": "Publications Request"
+            },
+            "fromDate": "From Date",
+            "toDate": "To Date",
+            "library": "Library",
+            "person": "Person",
+            "publication": "Publication"
+        }
+    }
+}

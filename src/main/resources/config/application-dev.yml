@@ -19,9 +19,9 @@ spring:
             enabled: false # we use gulp + BrowserSync for livereload
     datasource:
         url: jdbc:postgresql://localhost:5432/librarystatistics
-        name:
-        username: librarystatistics
-        password:
+        name: librarystatistics
+        username: postgres
+        password: postgres
     jpa:
         database-platform: ru.statistics.library.domain.util.FixedPostgreSQL82Dialect
         database: POSTGRESQL

@@ -1,0 +1,25 @@
+{
+    "librarystatisticsApp": {
+        "website" : {
+            "home": {
+                "title": "Websites",
+                "createLabel": "Создать новый Website",
+                "createOrEditLabel": "Создать или отредактировать Website",
+                "search": "Найти Website"
+            },
+            "created": "Новый Website создан с идентификатором {{ param }}",
+            "updated": "Website обновлен с идентификатором {{ param }}",
+            "deleted": "Website удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Website {{ id }}?"
+            },
+            "detail": {
+                "title": "Website"
+            },
+            "url": "Url",
+            "visits": "Visits",
+            "type": "Type",
+            "library": "Library"
+        }
+    }
+}

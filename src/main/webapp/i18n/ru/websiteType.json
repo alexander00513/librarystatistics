@@ -1,0 +1,9 @@
+{
+    "librarystatisticsApp": {
+        "WebsiteType" : {
+            "null": "",
+            "WEBSITE": "WEBSITE",
+            "BLOG": "BLOG"
+        }
+    }
+}

@@ -1,0 +1,73 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myEquipmentLabel" translate="librarystatisticsApp.equipment.home.createOrEditLabel">Create or edit a Equipment</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.equipment.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.equipment.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="librarystatisticsApp.equipment.uid" for="field_uid">Uid</label>
+            <input type="text" class="form-control" name="uid" id="field_uid"
+                    ng-model="vm.equipment.uid"
+                    required ng-maxlength="128" />
+            <div ng-show="editForm.uid.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.uid.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.uid.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="128">
+                    This field cannot be longer than 128 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="librarystatisticsApp.equipment.decription" for="field_decription">Decription</label>
+            <input type="text" class="form-control" name="decription" id="field_decription"
+                    ng-model="vm.equipment.decription"
+                    ng-maxlength="512" />
+            <div ng-show="editForm.decription.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.decription.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="512">
+                    This field cannot be longer than 512 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="librarystatisticsApp.equipment.type" for="field_type">Type</label>
+            <select class="form-control" name="type" ng-model="vm.equipment.type" id="field_type" required>
+                <option value="COMPUTER" translate="librarystatisticsApp.EquipmentType.COMPUTER">COMPUTER</option>
+                <option value="ROUTER" translate="librarystatisticsApp.EquipmentType.ROUTER">ROUTER</option>
+            </select>
+            <div ng-show="editForm.type.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.type.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="librarystatisticsApp.equipment.library" for="field_library">Library</label>
+            <select class="form-control" id="field_library" name="library" ng-model="vm.equipment.libraryId" ng-options="library.id as library.id for library in vm.libraries"            >
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

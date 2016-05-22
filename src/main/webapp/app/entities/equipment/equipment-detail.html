@@ -1,0 +1,30 @@
+
+<div>
+    <h2><span translate="librarystatisticsApp.equipment.detail.title">Equipment</span> {{vm.equipment.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="librarystatisticsApp.equipment.uid">Uid</span></dt>
+        <dd>
+            <span>{{vm.equipment.uid}}</span>
+        </dd>
+        <dt><span translate="librarystatisticsApp.equipment.decription">Decription</span></dt>
+        <dd>
+            <span>{{vm.equipment.decription}}</span>
+        </dd>
+        <dt><span translate="librarystatisticsApp.equipment.type">Type</span></dt>
+        <dd>
+            <span translate="{{'librarystatisticsApp.EquipmentType.' + vm.equipment.type}}">{{vm.equipment.type}}</span>
+        </dd>
+        <dt><span translate="librarystatisticsApp.equipment.library">Library</span></dt>
+        <dd>
+            <a ui-sref="library-detail({id:vm.equipment.libraryId})">{{vm.equipment.libraryId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

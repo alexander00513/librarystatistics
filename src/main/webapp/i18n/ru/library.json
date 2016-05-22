@@ -1,0 +1,33 @@
+{
+    "librarystatisticsApp": {
+        "library" : {
+            "home": {
+                "title": "Libraries",
+                "createLabel": "Создать новый Library",
+                "createOrEditLabel": "Создать или отредактировать Library",
+                "search": "Найти Library"
+            },
+            "created": "Новый Library создан с идентификатором {{ param }}",
+            "updated": "Library обновлен с идентификатором {{ param }}",
+            "deleted": "Library удален с идентификатором {{ param }}",
+            "delete": {
+                "question": "Вы уверены что хотите удалить Library {{ id }}?"
+            },
+            "detail": {
+                "title": "Library"
+            },
+            "name": "Name",
+            "description": "Description",
+            "type": "Type",
+            "internetAccess": "Internet Access",
+            "borough": "Borough",
+            "equipments": "Equipments",
+            "publications": "Publications",
+            "subscriptions": "Subscriptions",
+            "publicationsRequests": "Publications Requests",
+            "events": "Events",
+            "websites": "Websites",
+            "person": "Person"
+        }
+    }
+}
